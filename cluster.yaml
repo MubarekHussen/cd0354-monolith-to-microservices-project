@@ -1,0 +1,16 @@
+# A simple example of ClusterConfig object with two nodegroups:
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: project-3
+  region: us-east-1
+
+nodeGroups:
+  - name: ng1
+    instanceType: m5.large
+    desiredCapacity: 2
+  - name: ng2
+    instanceType: m5.large
+    desiredCapacity: 2
